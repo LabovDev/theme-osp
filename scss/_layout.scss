@@ -1,0 +1,113 @@
+//*  GLOBALS
+//*===========================================
+
+body, html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after { box-sizing: inherit; }
+
+* + * {}
+
+.clrfx:before, .clrfx:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clrfx:after { clear: both; }
+
+.clrfx { *zoom: 1; }
+
+
+//*  STRUCTURE
+//*=========================================== 
+
+html, body { 
+  height: 100%;
+  width: 100%;
+}
+
+article { width: 100%; }
+
+.wrap {
+	@include flx-p(
+		column,
+		nowrap,
+		flex-start,
+		flex-start,
+		flex-start
+	)
+	margin: 0;
+	width: 100%;
+	@include trans(all,0.3s,ease);
+	@media all and (min-width:$bp-3) {
+		@include flx-p(
+	  	row,
+	  	wrap,
+	  	flex-start,
+	  	flex-start,
+	  	flex-start
+	  )
+	}
+}
+
+.wrap--mxw {
+	margin: 0 auto;
+	max-width: $mxw;
+}
+
+.bloc {
+	width: 100%;
+}
+
+.bloc--50 {
+	width: 100%;
+	@include trans(all,0.3s,ease);
+	@media all and (min-width:$bp-3) {
+		padding: $space;
+		width: 50%;
+	}
+}
+
+.bloc--66 {
+	width: 100%;
+	@include trans(all,0.3s,ease);
+	@media all and (min-width:$bp-3) {
+		width: 66.666666%;
+	}
+}
+
+.bloc--33 {
+	width: 100%;
+	@include trans(all,0.3s,ease);
+	@media all and (min-width:$bp-3) {
+		width: 33.333333%;
+	}
+}
+
+.bloc--25 {
+	width: 100%;
+	@include trans(all,0.3s,ease);
+	@media all and (min-width:$bp-3) {
+		width: 25%;	
+	}
+}
+
+
+//*  BLOCKS
+//*===========================================
+
+.bloc--embed {
+	position: relative;
+	padding-bottom: 56.25%;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+	iframe { 
+	  position: absolute; 
+	  top: 0; 
+	  left: 0; 
+	  width: 100%; 
+	  height: 100%;
+	}
+}

@@ -1,0 +1,74 @@
+//* FONTS
+//*===========================================
+
+$fnt-1: 'Open Sans', helvetica, sans-serif;
+$fnt-2: 'Bungee', helvetica, sans-serif;
+$fnt-3: 'introrustg-base2line', sans-serif;
+
+
+//*  FONT SCALING
+//*===========================================
+
+$min-vp-width: 320;
+$max-vp-width: 1280;
+
+$min-font: 16;
+$max-font: 20;
+
+
+//* COLORS
+//*===========================================
+
+$cl-1: #2955A0;   // Blue
+$cl-2: #115DDD;   // Blue -- Hover
+$cl-3: #254D99;   // Blue -- Accent Dark
+$cl-4: #8EB9FF;   // Blue -- Accent Light
+$cl-5: #ff3333;   // Red
+$cl-6: #E60000;   // Red  -- Hover
+
+$k: #000000;
+$w:	#ffffff;
+
+
+//* GRAYS
+//*===========================================
+
+$gr-1: #333333;  // Darker
+$gr-2: #666666;
+$gr-3: #BBBBBB;
+$gr-4: #F5F5F5;
+$gr-5: #F8F8F8;  // Lighter
+
+
+//* MARGIN & PADDING 
+//*===========================================
+
+$mxw: 1140px;
+
+$space: 1em;
+$space-half: $space/2;
+$space-qrtr: $space/4;
+$space-and-half: $space*1.5;
+$space-2x: $space*2;
+$space-3x: $space*3;
+$space-4x: $space*4;
+
+
+//* BREAKPOINTS 
+//*===========================================
+
+$bp-1: 33.125em;  //* 530px
+$bp-2: 39.375em;  //* 630px
+$bp-3: 45.625em;  //* 730px
+$bp-4: 51.875em;  //* 830px
+$bp-5: 58.125em;  //* 930px
+$bp-6: 64.375em;  //* 1030px
+$bp-7: 70.625em;  //* 1130px
+$bp-8: 76.875em;  //* 1230px
+
+//* FROSTING 
+//*===========================================
+
+$txt-drop: 0 0 8px rgba(0,0,0,.76);
+$box-drop: 0 0 4px rgba(0,0,0,.25);
+$ltrsp: 1px; 

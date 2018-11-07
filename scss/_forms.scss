@@ -1,0 +1,48 @@
+//*  FORM ELEMENTS
+//*=========================================== 
+
+fieldset {}
+
+label {
+	color: $gr-2;
+	font: normal normal 80%/1 $fnt-1;
+}
+
+textarea {}
+
+input {}
+
+input[type="text"], input[type="tel"],
+input[type="email"], textarea {
+  background-color: $w;
+  border: 1px solid $gr-3;
+  color: $gr-1;
+  font: normal normal 120%/1 $fnt-1;
+  padding: $space-half;
+  width: 100%;
+}
+
+input[type="text"] {}
+
+input[type="radio"] {}
+
+input[type="checkbox"] {}
+
+button, input[type="submit"] {
+	background-color: $cl-1;
+  border-radius: 4px;
+  border: 2px solid $cl-1;
+  color: $w;
+  display: table;
+  font: 700 75%/1 $fnt-1;
+  padding: $space-half $space-2x;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include trans(all, 0.3s, ease);
+  &:hover {
+    background-color: $cl-2;
+    border: 2px solid $cl-2;
+    color: $w;
+    transform: scale(1.05);
+  }
+}

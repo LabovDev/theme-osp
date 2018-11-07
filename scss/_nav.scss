@@ -1,0 +1,131 @@
+//*  MAIN NAV
+//*===========================================
+
+#menu { 
+  position: relative;
+  text-align: left;
+  flex-basis: auto;
+  li { 
+    list-style-type: none;
+    position: relative;
+  }
+}
+
+#menu:not( :target ) > a:first-of-type,
+#menu:target > a:last-of-type { 
+  display: inline-block;
+  color: $cl-1;
+  font: normal normal 13px/1 $fnt-1;
+  padding: 0 0 0 24px;
+  text-transform: uppercase;
+  &:before {
+    font-size: 140%;
+    position: relative;
+  }
+  @include trans(all, 0.3s, ease);
+  @media all and (min-width:$bp-6) {
+    font-size: 22px;
+    padding: 0 0 0 48px;
+  }
+}
+
+.burger {
+  font-family: $fnt-1;
+}
+
+.burger:after {
+  content: '';
+  background-color: $cl-1;
+  box-shadow: 0 5px 0 $cl-1, 0 10px 0 $cl-1; 
+  height: 2px;
+  position: absolute;
+  width: 20px;
+  left: 0;
+  text-indent: -999em;
+  @include trans(all, 0.3s, ease);
+  @media all and (min-width:$bp-6) {
+    box-shadow: 0 8px 0 $cl-1, 0 16px 0 $cl-1;
+    height: 3px;
+    width: 30px;
+    margin-top: 2px;
+  }
+}
+
+#menu > a { 
+	display: none;
+	text-decoration: none;
+}
+
+#menu li { 
+  list-style-type: none;
+  position: relative;
+}
+
+#menu > ul {
+  height: auto;
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: scroll;
+  li {
+    background-color: $cl-1;
+    border-bottom: 1px solid $cl-3;
+    float: none; 
+    width: 100%;
+    text-align: left;
+    @media all and (min-width:$bp-3) {
+      text-align: left;
+    }
+    a {
+      color: $cl-4;
+      display: block;
+      font: normal normal 120%/1 $fnt-2;
+      padding: $space;
+      text-decoration: none;
+      &:hover { color: $w; }
+    }
+    &:hover { background-color: $cl-2; }
+  }
+}
+
+#menu > ul li ul li {
+	background-color: $cl-3;
+	border-bottom: 1px solid #22478C;
+}
+
+#menu:target > ul { 
+	background-color: $cl-1;
+	display: block;
+	left: -1em;
+	top: 42px;
+	height: 100vh;
+	width: 100vw;
+  @media all and (min-width:$bp-6) {
+    top: 61px;
+  }
+}
+
+@media all and (min-width:$bp-6) {
+  #menu:target > ul li ul { display: block; }
+}
+
+#menu li ul { 
+  position: static;
+}
+
+#menu li:hover ul { 
+  display: block;
+}
+
+#menu li ul {
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  li a { 
+    font-size: 90%;
+    margin-left: $space;
+    padding: $space-half;
+  }
+}

@@ -1,0 +1,25 @@
+/* PRINT CSS STYLES */
+
+@page { size: 7.5in 10in;
+}
+
+* { max-height: inherit; }
+
+html { overflow-x: visible; }
+
+body {
+	background-color: #fff;
+	background-image: none;
+	color: #000;
+	font: normal normal 14px/1.4 'Helvetica', sans-serif !important;
+	width: 100%;
+}
+
+
+body img {
+	display: block;
+	page-break-before: auto !important;
+  page-break-after: auto !important;
+  page-break-inside: avoid !important;
+  position: relative;
+}

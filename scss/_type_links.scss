@@ -1,0 +1,546 @@
+//*  TYPOGRAPHY
+//*===========================================
+
+:root { font-size: #{$min-font}px; }
+
+@media (min-width: #{$min-vp-width}px) and (max-width: #{$max-vp-width}px) {
+  :root {
+    font-size: calc( #{$min-font}px + (#{$max-font} - #{$min-font}) * ((100vw - #{$min-vp-width}px) / (#{$max-vp-width} - #{$min-vp-width}) ));
+  }
+}
+
+@media (min-width: #{$max-vp-width}px) {
+  :root {
+    font-size: #{$max-font}px;
+  }
+}
+
+@font-face {
+    font-family: 'introrustg-base2line';
+    src: url('../fonts/introrustg-base2line-webfont.woff2') format('woff2'),
+         url('../fonts/introrustg-base2line-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//*  HEADLINES
+//*=========================================== 
+
+html, body { font-family: $fnt-1; }
+
+h1 { font-size: 120%; }
+h2 { font-size: 115%; }
+h3 { font-size: 110%; }
+h4 { font-size: 100%; }
+h5 { font-size: 100%; }
+h6 { font-size: 100%; }
+
+h2:empty { display: none; }
+
+//*  HEADLINES
+//*===========================================
+
+.hdln {
+	color: $k;
+	font-family: $fnt-2;
+}
+
+.hero--gen .hdln--hero {
+	margin: $space 0 0 0 !important;
+}
+
+.hdln--hero {
+	color: $w;
+	font: normal normal 6vw/1 $fnt-3;
+	flex-grow: 1;
+	text-align: center;
+	text-shadow: $txt-drop;
+	margin: 0 auto $space-qrtr auto;
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-2) {
+		font-size: 4vw;
+	}
+	@media all and (min-width:$bp-7) {
+		font-size: 48px;
+	}
+}
+
+.hero--about div .hdln--hero {
+	max-width: 1000px;
+} 
+
+span.hdln--heroBig {
+	font-size: 100%;
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-2) {
+		font-size: 10vw;
+		display: block;
+	}
+	@media all and (min-width:$bp-7) {
+		font-size: 110px;
+	}
+}
+
+.hdln--heroSub {
+	color: $w;
+	font-size: 3vw;
+	line-height: 1; 
+	text-align: center;
+	text-shadow: $txt-drop;
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-3) {
+		font-size: 2.5vw;
+		margin-bottom: $space;
+	}
+	@media all and (min-width:$bp-4) {
+		font-size: 120%;
+	}
+}
+
+.hdln--feat {
+	font-size: 140%;
+	line-height: 1;
+	margin-bottom: $space-half;
+}
+
+.hdln--featFull {
+	text-align: center;
+}
+
+.hdln--featSec {
+	color: $gr-4;
+	margin: 0 auto $space-2x auto;
+	text-align: center;
+	font: 700 normal 100%/1 $fnt-1;
+	text-transform: uppercase;
+	border-bottom: 1px solid $gr-4;
+	padding-bottom: $space-half;
+	max-width: 900px;
+}
+
+.hdln--featSub {
+	background-color: $k;
+	color: $w;
+	font-size: 80%;
+	margin-bottom: $space;
+	padding: $space-half;
+}
+
+.hdln--featSubFull {
+	display: table;
+	text-align: center;
+	padding: $space-half $space-2x;
+	margin: 0 auto $space auto;
+}
+
+.hdln--prdName {
+	color: $w;
+	font: normal normal 200%/1 $fnt-3;
+	margin-top: $space;
+	text-align: center;
+	text-shadow: $txt-drop;
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-1) {
+		font-size: 275%; 
+		margin-top: $space-half;
+	}
+	@media all and (min-width:$bp-3) {
+		font-size: 325%;
+	}
+}
+
+.hdln--prdMain {
+	margin-bottom: $space-half;
+	text-align: center;
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-1) {
+		font-size: 180%;
+	}
+}
+
+.hdln--prdSub {
+	background-color: $k;
+	color: $w;
+	display: table;
+	font-size: 80%;
+	padding: $space-qrtr $space;
+	margin: 0 auto $space auto;
+	max-width: 700px;
+	text-align: center;
+}
+
+.hdln--specs {
+	font-size: 120%;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-3) {
+		font-size: 110%;
+	}
+}
+
+.hdln--cntnt { 
+	color: $k;
+	font-size: 150%;
+	margin: 0 auto $space auto;
+	text-shadow: none;
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-1) {
+		font-size: 200%;
+	}
+}
+
+.hdln--stock {
+	margin: 0 auto $space auto;
+}
+
+//*  PARAGRAPHS
+//*===========================================
+
+.txt {
+	font: normal 400 90%/1.6 $fnt-1;
+}
+
+.txt--hero {
+	color: $w;
+	font-size: 3.5vw;
+	font-weight: 700;
+	line-height: 1.4;
+	padding: $space $space 0 $space;
+	text-align: center;
+	text-shadow: $txt-drop;
+	// margin: $space-qrtr $space $space $space;
+	align-self: baseline;
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-1) {
+		font-size: 2.25vw;
+	}
+	@media all and (min-width:$bp-3) {
+		font-size: 1.75vw;
+		padding: 0 $space-half;
+	}
+	@media all and (min-width:$bp-5) {
+		font-size: 80%;
+		margin: 0 auto;
+		max-width: 800px;
+		padding: 0;
+	}
+}
+
+.txt--prdHero {
+	font-size: 80%; 
+	margin: 0 auto;
+	max-width: 900px;
+	text-align: center;
+}
+
+.blocFeat__cntnt p,
+.blocFeat__more p,
+.blocAbt__more p,
+.bloc__gen p {
+	font-size: 3.5vw;
+	margin-bottom: $space;
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-1) {
+		font-size: 2.25vw;
+	}
+	@media all and (min-width:$bp-3) {
+		font-size: 1.75vw;
+	}
+	@media all and (min-width:$bp-3) {
+		font-size: 80%;
+	}
+}
+
+.blocAbt__cntnt p { 
+	font-size: 3.5vw;
+	margin-bottom: $space;
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-1) {
+		font-size: 2.5vw;
+	}
+	@media all and (min-width:$bp-3) {
+		font-size: 2vw;
+	}
+	@media all and (min-width:$bp-5) {
+		font-size: 90%;
+	}
+}
+
+.bloc__gen {
+	h3 {
+		font: normal normal 140%/1 $fnt-2;
+		margin: $space-2x 0 $space-half 0;
+		@include trans(all, 0.3s, ease);
+		@media all and (min-width:$bp-3) {
+			font-size: 140%;
+		}
+	}
+	h5 {
+		font-size: 140%;
+		line-height: 1;
+		@include trans(all, 0.3s, ease);
+		@media all and (min-width:$bp-3) {
+			font-size: 110%;
+		}
+	}
+	h6 {
+		font-size: 90%;
+		line-height: 1;
+		margin-bottom: $space;
+		@include trans(all, 0.3s, ease);
+		@media all and (min-width:$bp-3) {
+			font-size: 70%;
+		}
+	}
+}
+
+p.txt--abtLead {
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 0 auto;
+	max-width: 800px;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.txt--featFull {
+	text-align: center;
+}
+
+.txt--mouse {
+	color: $gr-2;
+	font-size: 60%;
+}
+
+.hero--instock p {
+	font-weight: 700;
+	font-size: 80%; 
+	line-height: 1.2;
+	margin: 0 auto;
+	max-width: 700px;
+	text-align: center;
+}
+
+.txt--galCap {
+	background-color: $gr-4;
+	font: normal normal 80%/1 $fnt-2;
+	padding: $space;
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-3) {
+		font-size: 60%;
+	}
+}
+
+.txt--stockDesc { 
+	border-bottom: 1px solid $w;
+	margin-bottom: $space;
+	padding-bottom: $space;
+}
+
+//*  LISTS
+//*===========================================
+
+.list {}
+
+.list--stock {
+	margin-bottom: $space-2x;
+}
+
+.item {
+	list-style-type: none;
+}
+
+.item--stock {
+	font-size: 80%;
+	line-height: 1.6;
+}
+
+.item--mixer {
+	text-align: left;
+	margin-bottom: $space-half;
+}
+
+.item--ftrLink {
+	color: $w;
+	float: left;
+	font: normal normal 80%/1 $fnt-2;
+	padding-bottom: $space;
+	&:nth-child(odd) { width: 60%; }
+	&:nth-child(even) {width: 40%; }
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-3) {
+		float: none;
+		display: inline;
+		margin: 0 $space;
+	}
+	&:last-child {
+		border-top: 1px solid $gr-1;
+		font-size: 150%; 
+		margin: $space-half 0 0 0;
+		padding-top: $space-half;
+		width: 100%;
+		text-align: center;
+		@media all and (min-width:$bp-3) {
+			display: block;
+		}
+	}
+}
+
+.item--ftrNum a { 
+	color: $w;
+	text-decoration: none;
+}
+
+
+
+//*  TABLES
+//*===========================================
+
+.prdSpecs {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: $space 0;
+	width: 100%;
+	.txt--specVal { 
+		font-size: 80%;
+		padding: $space-qrtr $space-half;
+		width: 50%;
+		@include trans(all, 0.3s, ease);
+		@media all and (min-width:$bp-5) {
+			font-size: 70%;
+		}
+	}
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-5) {
+		max-width: 930px;
+		margin: $space auto;
+	}
+}
+.prdSpecs__row {
+	&:nth-child(odd) { background-color: $gr-4; }
+	&:nth-child(even) { background-color: #eee; }
+}
+
+//*  LINKS
+//*===========================================
+
+.link {
+	text-decoration: none;
+}
+
+.link--heroNav {
+	color: $w;
+	font: normal normal 100%/1 $fnt-2;
+	letter-spacing: .05em;
+	text-decoration: none;
+	
+	@include trans(all, 0.3s, ease);
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+.link--ftr {
+	color: $gr-3;
+	letter-spacing: $ltrsp;
+	@include trans(all, 0.3s, ease);
+	&:hover { 
+		color: $w;
+		transform: scale(1.1);
+	}
+}
+
+.link--mouse {
+	border-bottom: 1px dotted $gr-2;
+	color: $gr-2;
+}
+
+.bloc__gen a {
+	color: $cl-1;
+	font-weight: 700;
+	&:hover { color: $cl-2; }
+}
+
+a.fancybox {
+	overflow: hidden;
+	display: block;
+	background-color: $cl-1;
+	img {
+		transform: scale(1);
+		opacity: 1;
+		@include trans(all, 0.3s, ease);
+		&:hover {
+			transform: scale(1.1);
+			opacity: .5;
+		}
+	}
+}
+
+//*  BUTTONS
+//*===========================================
+
+.btn {
+  background-color: $w;
+  border-radius: 4px;
+  border: 2px solid $cl-1;
+  color: $cl-1;
+  display: table;
+  font: 700 75%/1 $fnt-1;
+  margin: 0 auto;
+  padding: $space-half $space-2x;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include trans(all, 0.3s, ease);
+  &:hover {
+    background-color: $w;
+    border: 2px solid $cl-2;
+    color: $cl-2 !important;
+    transform: scale(1.05);
+  }
+}
+
+.btn--ms {
+	margin: $space auto 0 auto;
+	font-size: 55%;
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-1) {
+		font-size: 65%;
+	}
+	@media all and (min-width:$bp-3) {
+		font-size: 75%;
+	}
+}
+
+.btn--dark {
+	background-color: $cl-1;
+	color: $w !important;
+	@include trans(all, 0.3s, ease);
+  &:hover {
+    background-color: $cl-2;
+    border: 2px solid $cl-2;
+    color: $w !important;
+  }
+}
+
+.btn--mxr {
+	color: $w !important;
+	text-align: left;
+	padding: $space;
+	margin: 0;
+	width: 100%;
+}
+
+.btn--prd {
+	width: 100%;
+	&:first-child { margin-bottom: $space; }
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-3) {
+		width: auto;
+		margin: $space; 
+	}
+}

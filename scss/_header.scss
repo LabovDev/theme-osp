@@ -1,0 +1,49 @@
+//*  HEADER
+//*===========================================
+
+#header {
+	background-color: $gr-5;
+	border-bottom: 4px solid $cl-1;
+	height: 64px;
+	padding: 0 0 0 $space;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+	@include flx-p(
+		row,
+		nowrap,
+		space-between,
+		center,
+		space-between
+	)
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-6) {
+		height: 100px;
+	}
+}
+
+#branding {
+	flex-basis: auto;
+	align-self: center;
+  img {
+	  display: block;
+	  height: 9vw;
+	  width: auto;
+	  margin-top: 2px;
+	  max-height: 40px;
+	  @include trans(all, 0.3s, ease);
+  	@media all and (min-width:$bp-6) {
+  		max-height: 70px;
+  	}
+  }
+}
+
+.csthLink {
+	flex-basis: auto;
+	align-self: stretch;
+	.csthLink__img {
+		height: 60px;
+		width: auto;
+	}
+}

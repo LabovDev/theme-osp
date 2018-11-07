@@ -1,0 +1,24 @@
+//*  FOOTER
+//*===========================================
+
+.ftr {
+	background-color: $k;
+	padding: $space;
+	position: relative;
+	z-index: 1;
+}
+
+.ftr__links {
+	text-align: left;
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-3) {
+		text-align: center;
+		margin: 0 auto;
+		max-width: $mxw
+	}
+}
+
+.ftr__legal {
+	margin: $space-3x auto $space auto;
+	text-align: center;
+}
