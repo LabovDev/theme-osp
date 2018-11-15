@@ -15,14 +15,6 @@
   }
 }
 
-@font-face {
-    font-family: 'introrustg-base2line';
-    src: url('../fonts/introrustg-base2line-webfont.woff2') format('woff2'),
-         url('../fonts/introrustg-base2line-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 //*  HEADLINES
 //*=========================================== 
 
@@ -43,6 +35,8 @@ h2:empty { display: none; }
 .hdln {
 	color: $k;
 	font-family: $fnt-2;
+	font-style: italic;
+	text-transform: uppercase;
 }
 
 .hero--gen .hdln--hero {
@@ -51,7 +45,7 @@ h2:empty { display: none; }
 
 .hdln--hero {
 	color: $w;
-	font: normal normal 6vw/1 $fnt-3;
+	font: 800 italic 6vw/1 $fnt-3;
 	flex-grow: 1;
 	text-align: center;
 	text-shadow: $txt-drop;
@@ -84,6 +78,7 @@ span.hdln--heroBig {
 .hdln--heroSub {
 	color: $w;
 	font-size: 3vw;
+	font-weight: 800;
 	line-height: 1; 
 	text-align: center;
 	text-shadow: $txt-drop;
@@ -99,9 +94,22 @@ span.hdln--heroBig {
 
 .hdln--feat {
 	font-size: 140%;
+	font-weight: 800;
 	line-height: 1;
 	margin-bottom: $space-half;
 }
+
+body.page-template-page-product .hdln--feat {
+	background-color: $cl-1;
+	text-align: center;
+	padding: $space-half $space;
+}
+
+body.page-template-page-about .hdln--feat {
+	text-align: center;
+}
+
+.blocFeat--alt .hdln--feat { color: $w; }
 
 .hdln--featFull {
 	text-align: center;
@@ -112,18 +120,30 @@ span.hdln--heroBig {
 	margin: 0 auto $space-2x auto;
 	text-align: center;
 	font: 700 normal 100%/1 $fnt-1;
-	text-transform: uppercase;
 	border-bottom: 1px solid $gr-4;
 	padding-bottom: $space-half;
 	max-width: 900px;
 }
 
 .hdln--featSub {
-	background-color: $k;
-	color: $w;
+	background-color: $gr-3;
+	color: $k;
 	font-size: 80%;
+	font-weight: 700;
 	margin-bottom: $space;
 	padding: $space-half;
+}
+
+body.page-template-page-product .hdln--featSub {
+	background-color: transparent;
+	padding: 0;
+	text-align: center;
+}
+
+body.page-template-page-about .hdln--featSub {
+	text-align: center;
+	max-width: 500px;
+	margin: 0 auto $space auto;
 }
 
 .hdln--featSubFull {
@@ -135,7 +155,7 @@ span.hdln--heroBig {
 
 .hdln--prdName {
 	color: $w;
-	font: normal normal 200%/1 $fnt-3;
+	font: 800 italic 200%/1 $fnt-3;
 	margin-top: $space;
 	text-align: center;
 	text-shadow: $txt-drop;
@@ -237,6 +257,7 @@ span.hdln--heroBig {
 }
 
 .blocFeat__cntnt p,
+.blocFeat__cntnt li,
 .blocFeat__more p,
 .blocAbt__more p,
 .bloc__gen p {
@@ -252,6 +273,13 @@ span.hdln--heroBig {
 	@media all and (min-width:$bp-3) {
 		font-size: 80%;
 	}
+}
+
+body.home .blocFeat__cntnt p,
+.blocFeat--alt .blocFeat__cntnt p { color: $w; }
+.blocFeat__cntnt li { 
+	margin-bottom: 0;
+	margin-left: $space;
 }
 
 .blocAbt__cntnt p { 
@@ -279,12 +307,9 @@ span.hdln--heroBig {
 		}
 	}
 	h5 {
-		font-size: 140%;
+		font-size: 110%;
 		line-height: 1;
-		@include trans(all, 0.3s, ease);
-		@media all and (min-width:$bp-3) {
-			font-size: 110%;
-		}
+		margin-bottom: $space-qrtr;
 	}
 	h6 {
 		font-size: 90%;
@@ -434,9 +459,10 @@ p.txt--abtLead {
 
 .link--heroNav {
 	color: $w;
-	font: normal normal 100%/1 $fnt-2;
+	font: 800 italic 170%/1 $fnt-2;
 	letter-spacing: .05em;
 	text-decoration: none;
+	text-transform: uppercase;
 	
 	@include trans(all, 0.3s, ease);
 	&:hover {

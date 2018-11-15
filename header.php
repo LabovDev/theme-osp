@@ -7,7 +7,7 @@
 	<?php wp_head(); ?>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('url'); ?>/wp-content/themes/theme-osp/css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('url'); ?>/wp-content/themes/theme-osp/css/styles.css" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee|Open+Sans:400,700">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,700i,800i" rel="stylesheet"> 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/themes/theme-osp/js/doubletaptogo.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/themes/theme-osp/js/csth-scripts-min.js"></script>
@@ -22,10 +22,10 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 		</nav>
 		<section id="branding">
-			<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('url'); ?>/wp-content/themes/theme-osp/img/continental-mixer-logo.png" alt="Continental Mixer"></a>
+			<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('url'); ?>/wp-content/themes/theme-osp/img/one-source-parts-logo.png" alt="Continental Mixer"></a>
 		</section>
 		<div class="csthLink">
-			<a href="<?php bloginfo('url'); ?>/?page_id=32"><img class="csthLink__img" src="<?php bloginfo('url'); ?>/wp-content/themes/theme-osp/img/csth_pgTrn.png" alt="CSTH Company"></a>
+			<a href="<?php bloginfo('url'); ?>/?page_id=32"><img class="csthLink__img" src="<?php bloginfo('url'); ?>/wp-content/themes/theme-osp/img/csth_pgTrn_osp.png" alt="CSTH Company"></a>
 		</div>
 	</header>
 	

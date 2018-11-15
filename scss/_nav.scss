@@ -15,7 +15,7 @@
 #menu:target > a:last-of-type { 
   display: inline-block;
   color: $cl-1;
-  font: normal normal 13px/1 $fnt-1;
+  font: 700 italic 16px/.6 $fnt-1;
   padding: 0 0 0 24px;
   text-transform: uppercase;
   &:before {
@@ -25,6 +25,7 @@
   @include trans(all, 0.3s, ease);
   @media all and (min-width:$bp-6) {
     font-size: 22px;
+    line-height: 1;
     padding: 0 0 0 48px;
   }
 }
@@ -78,11 +79,12 @@
       text-align: left;
     }
     a {
-      color: $cl-4;
+      color: $w;
       display: block;
-      font: normal normal 120%/1 $fnt-2;
+      font: 800 italic 120%/1 $fnt-2;
       padding: $space;
       text-decoration: none;
+      text-transform: uppercase;;
       &:hover { color: $w; }
     }
     &:hover { background-color: $cl-2; }

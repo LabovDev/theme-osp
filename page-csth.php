@@ -133,7 +133,7 @@ get_header(); ?>
 
 		<section class="wrap blocCta">
 			<a href="http://www.ezpacktrucks.com/" target="_blank" class="btn btn--prd btn--dark">Vist E-Z Pack Website</a>
-			<a href="https://www.onesourceparts.com/" target="_blank" class="btn btn--prd btn--dark">Vist One Source Parts Website</a>
+			<a href="https://www.continentalmixers.com/" target="_blank" class="btn btn--prd btn--dark">Vist Continental Mixers Website</a>
 		</section> <!-- END .blocCta -->
 			
 		</div> <!-- END .wrap--mxw -->
