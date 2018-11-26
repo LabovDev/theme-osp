@@ -20,19 +20,17 @@ get_header(); ?>
 				<p class="txt txt--prdHero"><?php the_field('prd_hero_desc_txt'); ?></p>
 			</div> <!-- END .heroContent -->
 		</header>
-		
+
 		<section class="wrap blocFeat">
-			<div class="bloc bloc--100">
+			<div class="bloc bloc--50">
 				<h1 class="hdln hdln--feat"><?php the_field('prd_over_hdln'); ?></h1>
-				<h2 class="hdln hdln--featSub"><?php the_field('prd_over_hdln_sub'); ?></h2>
+				<h2 class="hdln hdln--featSub"><?php the_field('prd_over_hdln_sub'); ?></h2>				
 			</div>
-			<div class="bloc--50 blocFeat__cntnt">
+			<div class="bloc bloc--50 blocFeat__cntnt">
 				<?php the_field('part_list_1'); ?>
-			</div>
-			<div class="bloc--50 blocFeat__cntnt">
 				<?php the_field('part_list_2'); ?>
 			</div>
-		</section> <!-- END .blocFeat -->
+		</section>
 			
 	</article>
 

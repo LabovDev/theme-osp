@@ -166,9 +166,10 @@ body.page-template-page-about .blocFeat--alt .blocFeat__cntnt {
 }
 
 body.page-template-page-about .blocFeat__img {
+	margin-bottom: 0 !important;
 	img { 
 		margin: 0 auto;
-		max-width: $mxw;
+		padding: 0;
 	}
 }
 

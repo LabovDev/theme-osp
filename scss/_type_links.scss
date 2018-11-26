@@ -138,6 +138,11 @@ body.page-template-page-product .hdln--featSub {
 	background-color: transparent;
 	padding: 0;
 	text-align: center;
+	@include trans(all, 0.3s, ease);
+	@media all and (min-width:$bp-3) {
+		text-align: left;
+		font-size: 100%;
+	}
 }
 
 body.page-template-page-about .hdln--featSub {
@@ -170,6 +175,7 @@ body.page-template-page-about .hdln--featSub {
 }
 
 .hdln--prdMain {
+	line-height: .9;
 	margin-bottom: $space-half;
 	text-align: center;
 	@include trans(all, 0.3s, ease);
@@ -392,8 +398,9 @@ p.txt--abtLead {
 .item--ftrLink {
 	color: $w;
 	float: left;
-	font: normal normal 80%/1 $fnt-2;
+	font: 800 italic 100%/1 $fnt-2;
 	padding-bottom: $space;
+	text-transform: uppercase;
 	&:nth-child(odd) { width: 60%; }
 	&:nth-child(even) {width: 40%; }
 	@include trans(all, 0.3s, ease);

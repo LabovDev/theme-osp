@@ -1,5 +1,14 @@
 			</div>
 			<footer class="ftr" role="contentinfo">
+				<div class="ftr__links">
+					<ul>
+						<li class="item item--ftrLink"><a class="link link--ftr" href="<?php bloginfo('url'); ?>/?page_id=14">Refuse Parts</a></li>
+						<li class="item item--ftrLink"><a class="link link--ftr" href="<?php bloginfo('url'); ?>/?page_id=405">Mixer Parts</a></li>
+						<li class="item item--ftrLink"><a class="link link--ftr" href="<?php bloginfo('url'); ?>/?page_id=18">About Us</a></li>
+						<li class="item item--ftrLink"><a class="link link--ftr" href="<?php bloginfo('url'); ?>/?page_id=16">Contact</a></li>
+						<li class="item item--ftrLink item--ftrNum">877-884-7662</li>
+					</ul>
+				</div>
 				
 				<div class="clrfx"></div>
 
